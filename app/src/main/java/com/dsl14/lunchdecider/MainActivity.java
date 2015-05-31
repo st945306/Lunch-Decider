@@ -145,10 +145,6 @@ public class MainActivity extends ActionBarActivity
                     }
                     break;
                 }
-                case 2: {
-                    rootView = inflater.inflate(R.layout.fragment_main2, container, false);
-                    TextView textView=(TextView) rootView
-                }
             }
             return rootView;
         }
