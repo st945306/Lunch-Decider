@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
@@ -27,6 +28,16 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private Spinner tSpinner;
+    public int weatherP, moodP, budgetP;
+    private void findViews(){
+        tSpinner = (Spinner)findViewById(R.id.weatherSpinner);
+        tSpinner.setOnItemSelectedListener(wlistener);
+        tSpinner = (Spinner)findViewById(R.id.moodSpinner);
+        tSpinner.setOnItemSelectedListener(mlistener);
+        tSpinner = (Spinner)findViewById(R.id.budgetSpinner);
+        tSpinner.setOnItemSelectedListener(blistener);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -135,6 +146,7 @@ public class MainActivity extends ActionBarActivity
             switch(section){
                 case 1: {
                     rootView = inflater.inflate(R.layout.fragment_main1, container, false);
+
                     break;
                 }
                 case 2: {
