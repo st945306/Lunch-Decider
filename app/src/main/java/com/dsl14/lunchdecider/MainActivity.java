@@ -1,21 +1,17 @@
 package com.dsl14.lunchdecider;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.content.Context;
-import android.os.Build;
-import android.os.Bundle;
-import android.view.Gravity;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.support.v4.widget.DrawerLayout;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
@@ -145,8 +141,6 @@ public class MainActivity extends ActionBarActivity
                     }
                     break;
                 }
-<<<<<<< HEAD
-=======
                 case 2: {
                     rootView = inflater.inflate(R.layout.fragment_main2, container, false);
                     TextView textView=(TextView) rootView.findViewById(R.id.main2_text);
@@ -158,7 +152,6 @@ public class MainActivity extends ActionBarActivity
                 default: {
                     rootView = inflater.inflate(R.layout.fragment_main, container, false);
                 }
->>>>>>> d8f3157bb0ee48370f7bb938b3c12cf08dcd735b
             }
             return rootView;
         }
