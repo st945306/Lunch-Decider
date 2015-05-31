@@ -54,6 +54,7 @@
         android:layout_gravity="center"
         android:text="What's its name?"/>
     <EditText
+        android:id="@+id/newRest"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
@@ -63,5 +64,6 @@
         android:layout_gravity="center"
         android:text="Add restaurant!"
         android:id="@+id/addButton"
+        android:onClick="addNewRestaurant"
         android:layout_marginBottom="44dp"/>
 </LinearLayout>
