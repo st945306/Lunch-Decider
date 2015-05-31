@@ -17,46 +17,35 @@
         android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/weatherSpinner"
-        android:entries="@array/weatherArray"
-        android:layout_below="@id/wtextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:entries="@array/weatherArray"/>
     <TextView
         android:id="@+id/mtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="25sp"
-        android:text="What's your mood?"
-        android:layout_below="@id/weatherSpinner"/>
+        android:text="What's your mood?"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/moodSpinner"
-        android:entries="@array/moodArray"
-        android:layout_below="@id/mtextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:entries="@array/moodArray"/>
     <TextView
         android:id="@+id/btextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="25sp"
-        android:text="Budget?"
-        android:layout_below="@id/moodSpinner"/>
+        android:text="Budget?"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/budgetSpinner"
-        android:entries="@array/budgetArray"
-        android:layout_below="@id/btextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
+        android:entries="@array/budgetArray"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -64,7 +53,5 @@
         android:text="Decide!"
         android:id="@+id/decideButton"
         android:onClick="decide"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="44dp"/>
 </LinearLayout>
