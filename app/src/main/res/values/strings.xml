@@ -2,7 +2,7 @@
     <string name="app_name">Lunch Decider</string>
 
     <string name="title_section1">New Restaurant</string>
-    <string name="title_section2">Section 2</string>
+    <string name="title_section2">Add New Restaurant</string>
     <string name="title_section3">Section 3</string>
     <string name="testing">test_text</string>
     <string-array name="weatherArray">
@@ -26,7 +26,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_example">Example action</string>
+    <string name="action_example">Settings</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Clear</string>
 </resources>
