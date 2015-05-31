@@ -7,12 +7,14 @@
         android:id="@+id/wtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:layout_marginTop="40dp"
         android:text="What's the weather today?"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/weatherSpinner"
         android:entries="@array/weatherArray"
@@ -23,12 +25,14 @@
         android:id="@+id/mtextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:text="What's your mood?"
         android:layout_below="@id/weatherSpinner"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/moodSpinner"
         android:entries="@array/moodArray"
@@ -39,12 +43,14 @@
         android:id="@+id/btextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:text="Budget?"
         android:layout_below="@id/moodSpinner"/>
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:textSize="25sp"
         android:id="@+id/budgetSpinner"
         android:entries="@array/budgetArray"
@@ -54,6 +60,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:text="Decide!"
         android:id="@+id/decideButton"
         android:layout_alignParentBottom="true"
