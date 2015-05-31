@@ -12,8 +12,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity
@@ -28,15 +28,45 @@ public class MainActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
-    private Spinner tSpinner;
-    public int weatherP, moodP, budgetP;
-    private void findViews(){
-        tSpinner = (Spinner)findViewById(R.id.weatherSpinner);
+    static public Spinner tSpinner;
+    static public int weatherP, moodP, budgetP;
+    public static void findViews(View view){
+        tSpinner = (Spinner)view.findViewById(R.id.weatherSpinner);
         tSpinner.setOnItemSelectedListener(wlistener);
-        tSpinner = (Spinner)findViewById(R.id.moodSpinner);
+        tSpinner = (Spinner)view.findViewById(R.id.moodSpinner);
         tSpinner.setOnItemSelectedListener(mlistener);
-        tSpinner = (Spinner)findViewById(R.id.budgetSpinner);
+        tSpinner = (Spinner)view.findViewById(R.id.budgetSpinner);
         tSpinner.setOnItemSelectedListener(blistener);
+    }
+    static Spinner.OnItemSelectedListener wlistener =
+            new Spinner.OnItemSelectedListener(){
+                public void onItemSelected(AdapterView parent, View view,
+                                           int pos, long id){
+                    weatherP = pos;
+                }
+                public void onNothingSelected(AdapterView parent){
+                }
+            };
+    static Spinner.OnItemSelectedListener mlistener =
+            new Spinner.OnItemSelectedListener(){
+                public void onItemSelected(AdapterView parent, View view,
+                                           int pos, long id){
+                    moodP = pos;
+                }
+                public void onNothingSelected(AdapterView parent){
+                }
+            };
+    static Spinner.OnItemSelectedListener blistener =
+            new Spinner.OnItemSelectedListener(){
+                public void onItemSelected(AdapterView parent, View view,
+                                           int pos, long id){
+                    budgetP = pos;
+                }
+                public void onNothingSelected(AdapterView parent){
+                }
+            };
+    public void decide(View view){
+
     }
 
     @Override
@@ -47,7 +77,6 @@ public class MainActivity extends ActionBarActivity
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
-
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
@@ -146,11 +175,12 @@ public class MainActivity extends ActionBarActivity
             switch(section){
                 case 1: {
                     rootView = inflater.inflate(R.layout.fragment_main1, container, false);
-
+                    findViews(rootView);
                     break;
                 }
                 case 2: {
                     rootView = inflater.inflate(R.layout.fragment_main2, container, false);
+                    findViews(rootView);
                     break;
                 }
                 default: {
