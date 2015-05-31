@@ -139,10 +139,6 @@ public class MainActivity extends ActionBarActivity
             switch(section){
                 case 1: {
                     rootView = inflater.inflate(R.layout.fragment_main1, container, false);
-                    TextView textView=(TextView) rootView.findViewById(R.id.main1_text);
-                    if(textView!=null){
-                        textView.setText("in main1");
-                    }
                     break;
                 }
                 case 2: {

@@ -5,6 +5,23 @@
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
     <string name="testing">test_text</string>
+    <string-array name="weatherArray">
+        <item>any</item>
+        <item>hot</item>
+        <item>cold</item>
+        <item>rainy</item>
+    </string-array>
+    <string-array name="moodArray">
+        <item>any</item>
+        <item>happy</item>
+        <item>suck</item>
+    </string-array>
+    <string-array name="budgetArray">
+        <item>any</item>
+        <item>90 ~ 110</item>
+        <item>110 ~ 160</item>
+        <item>160+</item>
+    </string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
