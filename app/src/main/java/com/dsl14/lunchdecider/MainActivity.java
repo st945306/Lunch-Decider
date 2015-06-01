@@ -15,9 +15,15 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+
 
 public class MainActivity extends ActionBarActivity
-        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks{
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -65,8 +71,19 @@ public class MainActivity extends ActionBarActivity
                 public void onNothingSelected(AdapterView parent){
                 }
             };
+    public static Socket socket;
+    public static BufferedReader br;
+    public static PrintWriter pw;
+    public static void createSocket() throws IOException{
+        String ip = "140.112.30.34";
+        int port = 12345;
+        socket = new Socket(ip, port);
+  //      br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    //    pw = new PrintWriter(socket.getOutputStream(), true);
+    }
     public void decide(View view){
 
+        pw.println(weatherP);
     }
 
     @Override
@@ -176,6 +193,9 @@ public class MainActivity extends ActionBarActivity
                 case 1: {
                     rootView = inflater.inflate(R.layout.fragment_main1, container, false);
                     findViews(rootView);
+                    try {
+                        createSocket();
+                  } catch (IOException ex){}
                     break;
                 }
                 case 2: {
