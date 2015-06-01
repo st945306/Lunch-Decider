@@ -29,4 +29,7 @@
     <string name="action_example">Settings</string>
 
     <string name="action_settings">Clear</string>
+    <string name="title_activity_add_rest">AddRestActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>

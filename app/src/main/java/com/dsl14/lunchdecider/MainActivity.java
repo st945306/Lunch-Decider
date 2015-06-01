@@ -1,6 +1,7 @@
 package com.dsl14.lunchdecider;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -13,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.io.BufferedReader;
@@ -36,6 +38,7 @@ public class MainActivity extends ActionBarActivity
     private CharSequence mTitle;
     static public Spinner tSpinner;
     static public int weatherP, moodP, budgetP;
+    public final static String EXTRA_MESSAGE="com.dsl14.lunchdecider.MESSAGE";
     public static void findViews(View view){
         tSpinner = (Spinner)view.findViewById(R.id.weatherSpinner);
         tSpinner.setOnItemSelectedListener(wlistener);
@@ -84,6 +87,11 @@ public class MainActivity extends ActionBarActivity
     public void decide(View view){
 
         pw.println(weatherP);
+    }
+
+    public void addNewRestaurant(View view){
+        EditText editText=(EditText) findViewById(R.id.newRest);
+        String newRest=editText.getText().toString();
     }
 
     @Override
