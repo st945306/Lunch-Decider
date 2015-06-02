@@ -81,11 +81,17 @@ public class MainActivity extends ActionBarActivity
                     BufferedReader br = new BufferedReader(new InputStreamReader(
                             socket.getInputStream()));
                     if (!addRest){
+                        pw.println("search");
                         pw.println(weatherP);
-
+                        pw.println(moodP);
+                        pw.println(budgetP);
 
                     }
                     else if (addRest){
+                        pw.println("addRest");
+                        pw.println(weatherP);
+                        pw.println(moodP);
+                        pw.println(budgetP);
                         pw.println(newRest);
 
                     }

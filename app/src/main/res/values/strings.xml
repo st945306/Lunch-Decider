@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Lunch Decider</string>
 
-    <string name="title_section1">New Restaurant</string>
+    <string name="title_section1">Search Restaurant</string>
     <string name="title_section2">Add New Restaurant</string>
     <string name="title_section3">Section 3</string>
     <string name="testing">test_text</string>
