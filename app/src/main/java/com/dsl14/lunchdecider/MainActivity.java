@@ -17,7 +17,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
@@ -35,7 +37,6 @@ public class MainActivity extends ActionBarActivity
     private CharSequence mTitle;
     static public Spinner tSpinner;
     static public int weatherP, moodP, budgetP;
-    public final static String EXTRA_MESSAGE="com.dsl14.lunchdecider.MESSAGE";
     public static void findViews(View view){
         tSpinner = (Spinner)view.findViewById(R.id.weatherSpinner);
         tSpinner.setOnItemSelectedListener(wlistener);
@@ -50,8 +51,7 @@ public class MainActivity extends ActionBarActivity
                                            int pos, long id){
                     weatherP = pos;
                 }
-                public void onNothingSelected(AdapterView parent){
-                }
+                public void onNothingSelected(AdapterView parent){}
             };
     static Spinner.OnItemSelectedListener mlistener =
             new Spinner.OnItemSelectedListener(){
@@ -59,8 +59,7 @@ public class MainActivity extends ActionBarActivity
                                            int pos, long id){
                     moodP = pos;
                 }
-                public void onNothingSelected(AdapterView parent){
-                }
+                public void onNothingSelected(AdapterView parent){}
             };
     static Spinner.OnItemSelectedListener blistener =
             new Spinner.OnItemSelectedListener(){
@@ -68,9 +67,10 @@ public class MainActivity extends ActionBarActivity
                                            int pos, long id){
                     budgetP = pos;
                 }
-                public void onNothingSelected(AdapterView parent){
-                }
+                public void onNothingSelected(AdapterView parent){}
             };
+    public View viewNow;
+    public boolean addRest;
     class thread extends Thread{
         public void run(){
             try {
@@ -78,21 +78,39 @@ public class MainActivity extends ActionBarActivity
                 if (socket.isConnected()){
                     PrintWriter pw = new
                             PrintWriter(socket.getOutputStream(), true);
-                    pw.println(weatherP);
+                    BufferedReader br = new BufferedReader(new InputStreamReader(
+                            socket.getInputStream()));
+                    if (!addRest){
+                        pw.println(weatherP);
+
+
+                    }
+                    else if (addRest){
+                        pw.println(newRest);
+
+                    }
+                }
+                else {
+                    Toast.makeText(viewNow.getContext(),
+                            "You are not connected!", Toast.LENGTH_LONG).show();
                 }
             } catch(IOException e){}
         }
     }
     public void decide(View view){
+        viewNow = view;
+        addRest = false;
         Thread t = new thread();
         t.start();
-
-        Toast.makeText(view.getContext(), "here", Toast.LENGTH_LONG).show();
     }
-
+    public String newRest;
     public void addNewRestaurant(View view){
-        EditText editText=(EditText) findViewById(R.id.newRest);
-        String newRest=editText.getText().toString();
+        viewNow = view;
+        addRest = true;
+        EditText editText = (EditText) findViewById(R.id.newRest);
+        newRest = editText.getText().toString();
+        Thread t = new thread();
+        t.start();
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
