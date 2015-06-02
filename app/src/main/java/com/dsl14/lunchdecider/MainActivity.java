@@ -75,19 +75,19 @@ public class MainActivity extends ActionBarActivity
         public void run(){
             try {
                 Socket socket = new Socket("140.112.30.34", 12345);
-                if (socket.isConnected()){
+                if (socket.isConnected()) {
                     PrintWriter pw = new
                             PrintWriter(socket.getOutputStream(), true);
                     BufferedReader br = new BufferedReader(new InputStreamReader(
                             socket.getInputStream()));
-                    if (!addRest){
+                    if (!addRest) {
                         pw.println("search");
                         pw.println(weatherP);
                         pw.println(moodP);
                         pw.println(budgetP);
 
                     }
-                    else if (addRest){
+                    else {
                         pw.println("addRest");
                         pw.println(weatherP);
                         pw.println(moodP);
@@ -96,11 +96,16 @@ public class MainActivity extends ActionBarActivity
 
                     }
                 }
-                else {
-                    Toast.makeText(viewNow.getContext(),
-                            "You are not connected!", Toast.LENGTH_LONG).show();
-                }
-            } catch(IOException e){}
+            } catch(IOException e){
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(viewNow.getContext(),
+                                "Sorry, you are not connected to server.",
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+            }
         }
     }
     public void decide(View view){
@@ -215,7 +220,6 @@ public class MainActivity extends ActionBarActivity
 
         public PlaceholderFragment() {
         }
-
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
