@@ -7,14 +7,22 @@ public class server{
 		InetAddress addr = InetAddress.getByName("140.112.30.34");
 		ServerSocket ser = new ServerSocket(port, 50, addr);
 
-		Socket client = ser.accept();
-		OutputStream os = client.getOutputStream();
-		PrintWriter pw = new PrintWriter(os, true);
-//		pw.println("Your are connected!");
-		
-		InputStreamReader isr = new InputStreamReader(client.getInputStream());
-		BufferedReader br = new BufferedReader(isr);
-		String str = br.readLine();
-		System.out.println(str);	
+		while (true){
+			Socket client = ser.accept();
+			OutputStream os = client.getOutputStream();
+			PrintWriter pw = new PrintWriter(os, true);
+			
+			InputStreamReader isr = new InputStreamReader(client.getInputStream());
+			BufferedReader br = new BufferedReader(isr);
+			String service = br.readLine();
+			if (service == "search"){
+			
+			
+			}
+			else if (service == "addRest"){
+			
+			
+			}
+		}
 	}
 }
