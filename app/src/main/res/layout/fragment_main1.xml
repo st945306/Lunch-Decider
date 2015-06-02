@@ -39,19 +39,43 @@
             android:id="@+id/weatherSpinner"
             android:entries="@array/weatherArray"/>
     </LinearLayout>
-    <TextView
-        android:id="@+id/btextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:text="Budget Condition"/>
-    <Spinner
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:id="@+id/budgetSpinner"
-        android:entries="@array/budgetArray"/>
-
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_lunch"
+                android:contentDescription="Lunch Icon"/>
+            <TextView
+                android:id="@+id/btextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:text="Budget Condition"/>
+        </LinearLayout>
+         <LinearLayout
+             android:layout_width=
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:id="@+id/budgetSpinner"
+                android:entries="@array/budgetArray"/>
+    </LinearLayout>
     <TextView
         android:id="@+id/mtextView"
         android:layout_width="wrap_content"
@@ -59,6 +83,7 @@
         android:textSize="25sp"
         android:text="What's your mood?"/>
     <Spinner
+        android:background="@drawable/gray"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
