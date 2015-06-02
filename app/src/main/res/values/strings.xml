@@ -3,24 +3,25 @@
 
     <string name="title_section1">Search Restaurant</string>
     <string name="title_section2">Add New Restaurant</string>
-    <string name="title_section3">Section 3</string>
-    <string name="testing">test_text</string>
+    <string name="title_section3">Feedback</string>
+
+    <!--<string name="testing">test_text</string>-->
     <string-array name="weatherArray">
-        <item>any</item>
-        <item>hot</item>
-        <item>cold</item>
-        <item>rainy</item>
+        <item>Any</item>
+        <item>Hot</item>
+        <item>Cold</item>
+        <item>Rainy</item>
     </string-array>
     <string-array name="moodArray">
-        <item>any</item>
-        <item>happy</item>
-        <item>suck</item>
+        <item>Any</item>
+        <item>Happy</item>
+        <item>Suck</item>
     </string-array>
     <string-array name="budgetArray">
-        <item>any</item>
-        <item>90 ~ 110</item>
-        <item>110 ~ 160</item>
-        <item>160+</item>
+        <item>Any</item>
+        <item>less than 110</item>
+        <item>110 to 160</item>
+        <item>more than 160</item>
     </string-array>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -31,5 +32,5 @@
     <string name="action_settings">Clear</string>
     <string name="title_activity_add_rest">AddRestActivity</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="dirtyWord">Fuck You!</string>
 </resources>
