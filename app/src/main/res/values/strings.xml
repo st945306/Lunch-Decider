@@ -2,10 +2,19 @@
     <string name="app_name">Lunch Decider</string>
 
     <string name="title_section1">Search Restaurant</string>
-    <string name="title_section2">Add New Restaurant</string>
+    <string name="title_section2">Recommend Restaurant</string>
     <string name="title_section3">Feedback</string>
 
-    <!--<string name="testing">test_text</string>-->
+    <string name="askWeather">Weather Condition</string>
+    <string name="askBudget">Budget Condition</string>
+    <string name="askDrink">Free Drinks?</string>
+    <string name="askRest">Enter the name of restaurant</string>
+
+    <string name="decide">Decide!</string>
+    <string name="add">Add Restaurant!</string>
+    <string name="lunchIcon">Lunch Icon</string>
+
+
     <string-array name="weatherArray">
         <item>Any</item>
         <item>Hot</item>
@@ -13,7 +22,7 @@
         <item>Rainy</item>
     </string-array>
     <string-array name="drinkArray">
-        <item>Any</item>
+        <item>Change this to checkbox</item>
         <item>YES</item>
         <item>NO</item>
     </string-array>
