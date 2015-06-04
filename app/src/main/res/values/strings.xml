@@ -13,6 +13,7 @@
     <string name="decide">Decide!</string>
     <string name="add">Add Restaurant!</string>
     <string name="lunchIcon">Lunch Icon</string>
+    <string name="restaurantName">restaurant name</string>
 
 
     <string-array name="weatherArray">
