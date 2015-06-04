@@ -96,19 +96,19 @@
                 android:src="@drawable/icon_lunch"
                 android:contentDescription="Lunch Icon"/>
             <TextView
-                android:id="@+id/mtextView"
+                android:id="@+id/dtextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
-                android:text="What's your mood?"/>
+                android:text="Free drinks?"/>
         </LinearLayout>
         <Spinner
             android:background="@drawable/gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="25sp"
-            android:id="@+id/moodSpinner"
-            android:entries="@array/moodArray"/>
+            android:id="@+id/drinkSpinner"
+            android:entries="@array/drinkArray"/>
         </LinearLayout>
     <Button
         android:layout_width="wrap_content"

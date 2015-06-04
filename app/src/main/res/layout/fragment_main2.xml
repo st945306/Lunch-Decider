@@ -19,20 +19,6 @@
         android:id="@+id/weatherSpinner"
         android:entries="@array/weatherArray"/>
     <TextView
-        android:id="@+id/mtextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:text="What's your mood?"/>
-    <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:id="@+id/moodSpinner"
-        android:entries="@array/moodArray"/>
-    <TextView
         android:id="@+id/btextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,6 +32,14 @@
         android:id="@+id/budgetSpinner"
         android:entries="@array/budgetArray"
         android:layout_gravity="center"/>
+    <CheckBox
+        android:id="@+id/dcheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:onClick="click"
+        android:text="Free drinks?"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

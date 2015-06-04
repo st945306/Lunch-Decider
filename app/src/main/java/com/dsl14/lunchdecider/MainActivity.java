@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -36,12 +37,10 @@ public class MainActivity extends ActionBarActivity
      */
     private CharSequence mTitle;
     static public Spinner tSpinner;
-    static public int weatherP, moodP, budgetP;
+    static public int weatherP, budgetP, drinkP;
     public static void findViews(View view){
         tSpinner = (Spinner)view.findViewById(R.id.weatherSpinner);
         tSpinner.setOnItemSelectedListener(wlistener);
-        tSpinner = (Spinner)view.findViewById(R.id.moodSpinner);
-        tSpinner.setOnItemSelectedListener(mlistener);
         tSpinner = (Spinner)view.findViewById(R.id.budgetSpinner);
         tSpinner.setOnItemSelectedListener(blistener);
     }
@@ -53,14 +52,6 @@ public class MainActivity extends ActionBarActivity
                 }
                 public void onNothingSelected(AdapterView parent){}
             };
-    static Spinner.OnItemSelectedListener mlistener =
-            new Spinner.OnItemSelectedListener(){
-                public void onItemSelected(AdapterView parent, View view,
-                                           int pos, long id){
-                    moodP = pos;
-                }
-                public void onNothingSelected(AdapterView parent){}
-            };
     static Spinner.OnItemSelectedListener blistener =
             new Spinner.OnItemSelectedListener(){
                 public void onItemSelected(AdapterView parent, View view,
@@ -69,6 +60,12 @@ public class MainActivity extends ActionBarActivity
                 }
                 public void onNothingSelected(AdapterView parent){}
             };
+    public void click(View view){
+        if (((CheckBox)view).isChecked())
+            drinkP = 1;
+        else
+            drinkP = 0;
+    }
     public View viewNow;
     public boolean addRest;
     class thread extends Thread{
@@ -83,17 +80,16 @@ public class MainActivity extends ActionBarActivity
                     if (!addRest) {
                         pw.println("search");
                         pw.println(weatherP);
-                        pw.println(moodP);
                         pw.println(budgetP);
+                        pw.println(drinkP);
 
                     }
                     else {
                         pw.println("addRest");
                         pw.println(weatherP);
-                        pw.println(moodP);
                         pw.println(budgetP);
+                        pw.println(drinkP);
                         pw.println(newRest);
-
                     }
                 }
             } catch(IOException e){

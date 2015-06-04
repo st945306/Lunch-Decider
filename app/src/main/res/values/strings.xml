@@ -12,10 +12,10 @@
         <item>Cold</item>
         <item>Rainy</item>
     </string-array>
-    <string-array name="moodArray">
+    <string-array name="drinkArray">
         <item>Any</item>
-        <item>Happy</item>
-        <item>Suck</item>
+        <item>YES</item>
+        <item>NO</item>
     </string-array>
     <string-array name="budgetArray">
         <item>Any</item>
