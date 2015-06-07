@@ -67,6 +67,15 @@ public class MainActivity extends ActionBarActivity
         else
             drinkP = 0;
     }
+    public void buttonClick(View view){
+        switch (view.getId()){
+            case R.id.yesButton:
+                drinkP = 1;
+                break;
+            case R.id.noButton:
+                drinkP = 0;
+        }
+    }
     public View viewNow;
     public boolean addRest;
     public final static String RESULT = "whatever";
