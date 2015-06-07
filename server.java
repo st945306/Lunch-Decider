@@ -42,6 +42,7 @@ public class server{
 		
 		int ans = (weather[weatherP]&budget[budgetP]&drink[drinkP]);
 		int count = 0;
+//		System.out.println(ans);
 		for (int i = 0; ans > 0 && count < 3 && i < restNum; i++, ans /= 2)
 			if (ans % 2 == 1 && count < 3){
 				pw.println(rest[i]);
@@ -75,7 +76,8 @@ public class server{
 
 		weather[weatherP] |= (1<<restNum);
 		budget[budgetP] |= (1<<restNum);
-		drink[drinkP] |= (1<<restNum);
+		if (drinkP == 0)
+			drink[1] &= (~(1<<restNum));
 		rest[restNum] = newRest;
 		restNum++;
 	}
@@ -94,7 +96,8 @@ public class server{
 			drinkP = buf[2] - '0';
 			weather[weatherP] |= (1<<count);
 			budget[budgetP] |= (1<<count);
-			drink[drinkP] |= (1<<count);
+			if (drinkP == 0)
+				drink[1] &= (~(1<<count));
 			for (int i = 4; i < buf.length; i++)
 				restName[i] = buf[i];
 			rest[count] = new String(restName);
@@ -111,9 +114,8 @@ public class server{
 		for (int i = 0; i < 4; i++){
 			weather[i] = 0;
 			budget[i] = 0;
-			drink[i] = 0;
 		}
-		int v = (~(1<<31)) - 1;
-		weather[0] = v; budget[0] = v; drink[0] = v;
+		int v = (~(1<<31));
+		weather[0] = v; budget[0] = v; drink[0] = v; drink[1] = v;
 	}
 }
