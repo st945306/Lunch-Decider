@@ -39,6 +39,24 @@ public class server{
 		budgetP = Integer.parseInt(br.readLine());
 		drinkP = Integer.parseInt(br.readLine());
 		System.out.println("search: " + weatherP + budgetP + drinkP);			
+		
+		int ans = (weather[weatherP]&budget[budgetP]&drink[drinkP]);
+		int count = 0;
+		for (int i = 0; ans > 0 && count < 3; i++, ans /= 2)
+			if (ans % 2 == 1 && count < 3){
+				pw.println(rest[i]);
+				count++;
+			}
+		if (count == 0){
+			pw.println("Sorry, we can't find any restaurant for you.");
+			count++;		
+		}
+		while (count < 3){
+			pw.println("");
+			count++;
+		}
+
+
 	}
 
 	private static void addRest(BufferedReader br) throws IOException{
@@ -95,6 +113,7 @@ public class server{
 			budget[i] = 0;
 			drink[i] = 0;
 		}
-		weather[0] = 1; budget[0] = 1; drink[0] = 1;
+		int v = (~(1<<31)) - 1;
+		weather[0] = v; budget[0] = v; drink[0] = v;
 	}
 }
