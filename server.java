@@ -42,7 +42,7 @@ public class server{
 		
 		int ans = (weather[weatherP]&budget[budgetP]&drink[drinkP]);
 		int count = 0;
-		for (int i = 0; ans > 0 && count < 3; i++, ans /= 2)
+		for (int i = 0; ans > 0 && count < 3 && i < restNum; i++, ans /= 2)
 			if (ans % 2 == 1 && count < 3){
 				pw.println(rest[i]);
 				count++;
