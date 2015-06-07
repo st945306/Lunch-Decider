@@ -8,3 +8,4 @@
 *.un~
 log
 data
+*.class
