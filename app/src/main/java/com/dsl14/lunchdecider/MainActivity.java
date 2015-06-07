@@ -1,6 +1,7 @@
 package com.dsl14.lunchdecider;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -68,6 +69,8 @@ public class MainActivity extends ActionBarActivity
     }
     public View viewNow;
     public boolean addRest;
+    public final static String RESULT = "whatever";
+    public Intent intent;
     class thread extends Thread{
         public void run(){
             try {
@@ -82,7 +85,12 @@ public class MainActivity extends ActionBarActivity
                         pw.println(weatherP);
                         pw.println(budgetP);
                         pw.println(drinkP);
-
+                        String[] result = new String[3];
+                        result[0] = br.readLine();
+                        result[1] = br.readLine();
+                        result[2] = br.readLine();
+                        intent.putExtra(RESULT, result);
+                        startActivity(intent);
                     }
                     else {
                         pw.println("addRest");
@@ -107,6 +115,7 @@ public class MainActivity extends ActionBarActivity
     public void decide(View view){
         viewNow = view;
         addRest = false;
+        intent = new Intent(this, DisplayResultActivity.class);
         Thread t = new thread();
         t.start();
     }

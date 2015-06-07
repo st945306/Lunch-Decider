@@ -24,11 +24,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lunch"
-                android:contentDescription="Lunch Icon"/>
+                android:contentDescription="@string/lunchIcon"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weather Condition"
+                android:text="@string/askWeather"
                 android:textColor="#000"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -58,14 +58,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lunch"
-                android:contentDescription="Lunch Icon"/>
+                android:contentDescription="@string/lunchIcon"/>
             <TextView
                 android:id="@+id/btextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:textSize="24sp"
-                android:text="Budget Condition"/>
+                android:text="@string/askBudget"/>
         </LinearLayout>
 
             <Spinner
@@ -94,26 +94,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/icon_lunch"
-                android:contentDescription="Lunch Icon"/>
+                android:contentDescription="@string/lunchIcon"/>
             <TextView
                 android:id="@+id/dtextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="25sp"
-                android:text="Free drinks?"/>
+                android:text="@string/askDrink"/>
         </LinearLayout>
-        <Spinner
-            android:background="@drawable/gray"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
-            android:id="@+id/drinkSpinner"
-            android:entries="@array/drinkArray"/>
-        </LinearLayout>
+            android:orientation="horizontal">
+            <RadioButton
+                android:text="Yes"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:text="No"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RadioGroup>
+    </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Decide!"
+        android:text="@string/decide"
         android:id="@+id/decideButton"
         android:onClick="decide"
         android:layout_marginBottom="44dp"/>
