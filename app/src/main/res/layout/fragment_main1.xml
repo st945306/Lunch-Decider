@@ -108,14 +108,18 @@
             android:orientation="horizontal">
             <RadioButton
                 android:text="Yes"
+                android:id="@+id/yesButton"
                 android:textSize="25sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="buttonClick" />
             <RadioButton
                 android:text="No"
+                android:id="@+id/noButton"
                 android:textSize="25sp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:onClick="buttonClick" />
         </RadioGroup>
     </LinearLayout>
     <Button
