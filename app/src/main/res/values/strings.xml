@@ -43,4 +43,7 @@
     <string name="title_activity_add_rest">AddRestActivity</string>
 
     <string name="dirtyWord">Fuck You!</string>
+    <string name="title_activity_display_result">Search Result</string>
+
+    <string name="hello_world">Hello world!</string>
 </resources>
