@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -44,6 +45,8 @@ public class MainActivity extends ActionBarActivity
         tSpinner.setOnItemSelectedListener(wlistener);
         tSpinner = (Spinner)view.findViewById(R.id.budgetSpinner);
         tSpinner.setOnItemSelectedListener(blistener);
+        RadioButton n = (RadioButton)view.findViewById(R.id.noButton);
+        n.setChecked(true);
     }
     static Spinner.OnItemSelectedListener wlistener =
             new Spinner.OnItemSelectedListener(){
@@ -78,7 +81,6 @@ public class MainActivity extends ActionBarActivity
     }
     public View viewNow;
     public boolean addRest;
-    public final static String RESULT = "whatever";
     public Intent intent;
     class thread extends Thread{
         public void run(){
@@ -98,7 +100,7 @@ public class MainActivity extends ActionBarActivity
                         result[0] = br.readLine();
                         result[1] = br.readLine();
                         result[2] = br.readLine();
-                        intent.putExtra(RESULT, result);
+                        intent.putExtra("RESULT", result);
                         startActivity(intent);
                     }
                     else {
@@ -107,6 +109,14 @@ public class MainActivity extends ActionBarActivity
                         pw.println(budgetP);
                         pw.println(drinkP);
                         pw.println(newRest);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(viewNow.getContext(),
+                                        "Thanks for your recommendation!",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });
                     }
                 }
             } catch(IOException e){

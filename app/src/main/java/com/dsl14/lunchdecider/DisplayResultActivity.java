@@ -15,7 +15,7 @@ public class DisplayResultActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
         Intent intent = getIntent();
-        String[] result = intent.getStringArrayExtra(MainActivity.RESULT);
+        String[] result = intent.getStringArrayExtra("RESULT");
         TextView[] tv = new TextView[3];
         tv[0] = (TextView)findViewById(R.id.result1);
         tv[1] = (TextView)findViewById(R.id.result2);
