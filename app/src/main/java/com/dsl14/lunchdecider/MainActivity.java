@@ -45,8 +45,6 @@ public class MainActivity extends ActionBarActivity
         tSpinner.setOnItemSelectedListener(wlistener);
         tSpinner = (Spinner)view.findViewById(R.id.budgetSpinner);
         tSpinner.setOnItemSelectedListener(blistener);
-        RadioButton n = (RadioButton)view.findViewById(R.id.noButton);
-        n.setChecked(true);
     }
     static Spinner.OnItemSelectedListener wlistener =
             new Spinner.OnItemSelectedListener(){
@@ -253,6 +251,8 @@ public class MainActivity extends ActionBarActivity
                 case 1: {
                     rootView = inflater.inflate(R.layout.fragment_main1, container, false);
                     findViews(rootView);
+                    RadioButton n = (RadioButton)rootView.findViewById(R.id.noButton);
+                    n.setChecked(true);
                     break;
                 }
                 case 2: {

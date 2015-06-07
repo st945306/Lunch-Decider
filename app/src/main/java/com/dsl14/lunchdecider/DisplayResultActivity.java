@@ -21,7 +21,7 @@ public class DisplayResultActivity extends ActionBarActivity {
         tv[1] = (TextView)findViewById(R.id.result2);
         tv[2] = (TextView)findViewById(R.id.result3);
         for (int i = 0; i < 3; i++){
-            tv[i].setTextSize(40);
+            tv[i].setTextSize(30);
             tv[i].setText(result[i]);
         }
     }
