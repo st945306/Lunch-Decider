@@ -80,8 +80,16 @@ public class server{
 		pw.flush();
 		fout.close();
 
-		weather[weatherP] |= (1<<restNum);
-		budget[budgetP] |= (1<<restNum);
+		if (weatherP == 0)
+			for (int i = 1; i <= 3; i++)
+				weather[i] |= (1<<restNum);
+		else
+			weather[weatherP] |= (1<<restNum);
+		if (budgetP == 0)
+			for (int i = 1; i <= 3; i++)
+				budget[i] |= (1<<restNum);
+		else
+			budget[budgetP] |= (1<<restNum);
 		if (drinkP == 0)
 			drink[1] &= (~(1<<restNum));
 		rest[restNum] = newRest;
@@ -100,8 +108,16 @@ public class server{
 			weatherP = buf[0] - '0';
 			budgetP = buf[1] - '0';
 			drinkP = buf[2] - '0';
-			weather[weatherP] |= (1<<count);
-			budget[budgetP] |= (1<<count);
+			if (weatherP == 0)
+				for (int i = 1; i <= 3; i++)
+					weather[i] |= (1<<count);
+			else
+				weather[weatherP] |= (1<<count);
+			if (budgetP == 0)
+				for (int i = 0; i <= 3; i++)
+					budget[i] |= (1<<count);
+			else
+				budget[budgetP] |= (1<<count);
 			if (drinkP == 0)
 				drink[1] &= (~(1<<count));
 			for (int i = 4; i < buf.length; i++)
