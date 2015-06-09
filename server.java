@@ -46,6 +46,7 @@ public class server{
 		for (int i = 0; ans > 0 && count < 3 && i < restNum; i++, ans /= 2)
 			if (ans % 2 == 1 && count < 3){
 				pw.println(rest[i]);
+//				System.out.println(rest[i]);
 				count++;
 			}
 		if (count == 0){
@@ -66,6 +67,11 @@ public class server{
 		budgetP = Integer.parseInt(br.readLine());
 		drinkP = Integer.parseInt(br.readLine());
 		String newRest = br.readLine();
+		for (int i = 0; i < restNum; i++)
+			if (newRest.equals(rest[i])){
+				System.out.println("restaurant already exist");
+				return;
+			}
 
 		System.out.println("add restaurant: " + weatherP + budgetP + drinkP + " " + newRest);
 		FileWriter fout = new FileWriter("./data", true);
@@ -99,8 +105,9 @@ public class server{
 			if (drinkP == 0)
 				drink[1] &= (~(1<<count));
 			for (int i = 4; i < buf.length; i++)
-				restName[i] = buf[i];
-			rest[count] = new String(restName);
+				restName[i - 4] = buf[i];
+			rest[count] = new String(restName).substring(0, 
+					buf.length - 4);
 			count++;
 		}
 		fin.close();
@@ -116,6 +123,7 @@ public class server{
 			budget[i] = 0;
 		}
 		int v = (~(1<<31));
-		weather[0] = v; budget[0] = v; drink[0] = v; drink[1] = v;
+		weather[0] = v; budget[0] = v;
+		drink[0] = v; drink[1] = v;
 	}
 }
