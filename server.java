@@ -68,7 +68,7 @@ public class server{
 		drinkP = Integer.parseInt(br.readLine());
 		String newRest = br.readLine();
 		for (int i = 0; i < restNum; i++)
-			if (newRest.equals(rest[i])){
+			if (newRest.equalsIgnoreCase(rest[i])){
 				System.out.println("restaurant already exist");
 				return;
 			}
