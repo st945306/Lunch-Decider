@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 
@@ -46,5 +47,10 @@ public class DisplayResultActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void searchResultMap(View view){
+        Intent intent = new Intent(this,searchResultMapsActivity.class);
+        startActivity(intent);
     }
 }

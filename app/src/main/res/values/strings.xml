@@ -14,6 +14,7 @@
     <string name="add">Add Restaurant!</string>
     <string name="lunchIcon">Lunch Icon</string>
     <string name="restaurantName">restaurant name</string>
+    <string name="searchResultOnMap">Check them on the map!</string>
 
 
     <string-array name="weatherArray">
@@ -46,4 +47,6 @@
     <string name="title_activity_display_result">Search Result</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_search_result_maps">Map</string>
+    <string name="title_activity_add_rest_maps">Map</string>
 </resources>
