@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CDE"
     tools:context="com.dsl14.lunchdecider.DisplayResultActivity">
     <!-- Start of result 1 -->
     <LinearLayout
@@ -24,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result 1"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
     </LinearLayout>
     <!-- End of result 1 -->
     <!-- Start of result 2 -->
@@ -45,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result 2"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
     </LinearLayout>
     <!-- End of result 2 -->
     <!-- Start of result 3 -->
@@ -66,7 +67,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Result 3"
-            android:textSize="25sp" />
+            android:textSize="22sp" />
     </LinearLayout>
     <!-- End of result 3 -->
     <com.beardedhen.androidbootstrap.BootstrapButton
