@@ -7,7 +7,7 @@
 
     <string name="askWeather">Weather Condition</string>
     <string name="askBudget">Budget Condition</string>
-    <string name="askDrink">Free Drinks?</string>
+    <string name="askDrink">Free Drinks</string>
     <string name="askRest">Name of the Restaurant</string>
 
     <string name="decide">Search</string>

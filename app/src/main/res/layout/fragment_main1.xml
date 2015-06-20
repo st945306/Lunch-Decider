@@ -1,131 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <!-- Start of card 1 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#FFF"
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_lunch"
-                android:contentDescription="@string/lunchIcon"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/askWeather"
-                android:textColor="#000"
-                android:textSize="24sp" />
-        </LinearLayout>
-        <Spinner
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:text="@string/askWeather"
+            android:textSize="22sp" />
+        <Spinner
             android:id="@+id/weatherSpinner"
-            android:entries="@array/weatherArray"/>
+            android:entries="@array/weatherArray"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="25sp" />
     </LinearLayout>
+    <!-- End of card 1 -->
+    <!-- Start of card 2 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="#FFF"
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_lunch"
-                android:contentDescription="@string/lunchIcon"/>
-            <TextView
-                android:id="@+id/btextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:textSize="24sp"
-                android:text="@string/askBudget"/>
-        </LinearLayout>
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:id="@+id/budgetSpinner"
-                android:entries="@array/budgetArray"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="#FFF"
-        android:layout_marginTop="6dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="8dp"
-        android:paddingRight="8dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/icon_lunch"
-                android:contentDescription="@string/lunchIcon"/>
-            <TextView
-                android:id="@+id/dtextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="25sp"
-                android:text="@string/askDrink"/>
-        </LinearLayout>
-        <RadioGroup
-            android:layout_width="fill_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/askBudget"
+            android:textSize="22sp" />
+        <Spinner
+            android:id="@+id/budgetSpinner"
+            android:entries="@array/budgetArray"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <!-- End of card 2 -->
+    <!-- Start of card 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/askDrink"
+            android:textSize="22sp" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
             <RadioButton
                 android:text="Yes"
                 android:id="@+id/yesButton"
-                android:textSize="25sp"
+                android:textSize="14sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="buttonClick" />
             <RadioButton
                 android:text="No"
                 android:id="@+id/noButton"
-                android:textSize="25sp"
+                android:textSize="14sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
                 android:onClick="buttonClick" />
         </RadioGroup>
     </LinearLayout>
-    <Button
+    <!-- End of card 3 -->
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/decideButton"
+        android:text="@string/decide"
+        android:textSize="18sp"
+        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/decide"
-        android:id="@+id/decideButton"
-        android:onClick="decide"
-        android:layout_marginBottom="44dp"/>
+        android:layout_marginTop="10dp"
+        bootstrap:bb_type="primary"
+        bootstrap:bb_roundedCorners="true"
+        android:onClick="decide" />
 </LinearLayout>

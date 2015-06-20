@@ -1,65 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/wtextView"
-        android:layout_width="wrap_content"
+    <!-- Start of card 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:layout_marginTop="40dp"
-        android:text="@string/askWeather"/>
-    <Spinner
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/askWeather"
+            android:textSize="22sp" />
+        <Spinner
+            android:id="@+id/weatherSpinner"
+            android:entries="@array/weatherArray"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <!-- End of card 1 -->
+    <!-- Start of card 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:id="@+id/weatherSpinner"
-        android:entries="@array/weatherArray"/>
-    <TextView
-        android:id="@+id/btextView"
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/askBudget"
+            android:textSize="22sp" />
+        <Spinner
+            android:id="@+id/budgetSpinner"
+            android:entries="@array/budgetArray"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="25sp" />
+    </LinearLayout>
+    <!-- End of card 2 -->
+    <!-- Start of card 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:text="@string/askBudget"/>
-    <Spinner
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/askDrink"
+            android:textSize="22sp" />
+        <CheckBox
+            android:id="@+id/dcheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:onClick="click"
+            android:text="@string/askDrink"/>
+    </LinearLayout>
+    <!-- End of card 3 -->
+    <!-- Start of card 4 -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:id="@+id/budgetSpinner"
-        android:entries="@array/budgetArray"
-        android:layout_gravity="center"/>
-    <CheckBox
-        android:id="@+id/dcheckBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="25sp"
-        android:onClick="click"
-        android:text="@string/askDrink"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:id="@+id/addNewRestaurant"
-        android:layout_gravity="center"
-        android:text="@string/askRest"/>
-    <EditText
-        android:id="@+id/newRest"
-        android:inputType="text"
-        android:hint="@string/restaurantName"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/add"
+        android:orientation="vertical"
+        android:background="#FFF"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingTop="12dp"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/askRest"
+            android:textSize="22sp" />
+        <EditText
+            android:id="@+id/newRest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:inputType="text"
+            android:hint="@string/restaurantName" />
+    </LinearLayout>
+    <!-- End of card 4 -->
+    <com.beardedhen.androidbootstrap.BootstrapButton
         android:id="@+id/addButton"
-        android:onClick="addNewRestaurant"
-        android:layout_marginBottom="44dp"/>
+        android:text="@string/add"
+        android:textSize="18sp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        bootstrap:bb_type="primary"
+        bootstrap:bb_roundedCorners="true"
+        android:onClick="addNewRestaurant" />
 </LinearLayout>
