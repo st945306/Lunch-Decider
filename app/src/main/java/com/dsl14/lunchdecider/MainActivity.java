@@ -83,7 +83,7 @@ public class MainActivity extends ActionBarActivity
     class thread extends Thread{
         public void run(){
             try {
-                Socket socket = new Socket("140.112.30.34", 12345);
+                Socket socket = new Socket("140.112.30.39", 12345);
                 if (socket.isConnected()) {
                     PrintWriter pw = new
                             PrintWriter(socket.getOutputStream(), true);
