@@ -108,7 +108,7 @@
         <CheckBox
             android:id="@+id/dcheckBox"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="60dp"
             android:gravity="center_vertical"
             android:textSize="14sp"
             android:onClick="click"
@@ -147,6 +147,7 @@
             android:id="@+id/newRest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_marginBottom="15dp"
             android:inputType="text"
             android:hint="@string/restaurantName" />
