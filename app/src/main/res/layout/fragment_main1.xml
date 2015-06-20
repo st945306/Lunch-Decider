@@ -73,7 +73,7 @@
             android:id="@+id/budgetSpinner"
             android:entries="@array/budgetArray"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
     </LinearLayout>
     <!-- End of card 2 -->
@@ -107,7 +107,7 @@
         </LinearLayout>
         <RadioGroup
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:gravity="center_vertical"
             android:orientation="horizontal">
             <RadioButton

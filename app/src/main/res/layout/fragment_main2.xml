@@ -37,7 +37,7 @@
             android:id="@+id/weatherSpinner"
             android:entries="@array/weatherArray"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
     </LinearLayout>
     <!-- End of card 1 -->
@@ -73,7 +73,7 @@
             android:id="@+id/budgetSpinner"
             android:entries="@array/budgetArray"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
     </LinearLayout>
     <!-- End of card 2 -->
@@ -108,7 +108,7 @@
         <CheckBox
             android:id="@+id/dcheckBox"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:gravity="center_vertical"
             android:textSize="14sp"
             android:onClick="click"
@@ -148,7 +148,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="10dp"
             android:inputType="text"
             android:hint="@string/restaurantName" />
     </LinearLayout>

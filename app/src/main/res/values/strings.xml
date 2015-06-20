@@ -13,7 +13,7 @@
     <string name="decide">Search</string>
     <string name="add">Add</string>
     <string name="lunchIcon">Lunch Icon</string>
-    <string name="restaurantName">restaurant name</string>
+    <string name="restaurantName">Please enter the restaurant name. </string>
     <string name="searchResultOnMap">Check them on the map</string>
 
 
