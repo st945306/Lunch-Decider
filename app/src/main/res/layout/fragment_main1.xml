@@ -17,11 +17,22 @@
         android:paddingTop="12dp"
         android:paddingLeft="18dp"
         android:paddingRight="18dp">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/askWeather"
-            android:textSize="22sp" />
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@drawable/icon_weather2"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/askWeather"
+                android:textSize="22sp" />
+        </LinearLayout>
         <Spinner
             android:id="@+id/weatherSpinner"
             android:entries="@array/weatherArray"
@@ -42,11 +53,22 @@
         android:paddingTop="12dp"
         android:paddingLeft="18dp"
         android:paddingRight="18dp">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/askBudget"
-            android:textSize="22sp" />
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@drawable/icon_budget2"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/askBudget"
+                android:textSize="22sp" />
+        </LinearLayout>
         <Spinner
             android:id="@+id/budgetSpinner"
             android:entries="@array/budgetArray"
@@ -67,11 +89,22 @@
         android:paddingTop="12dp"
         android:paddingLeft="18dp"
         android:paddingRight="18dp">
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/askDrink"
-            android:textSize="22sp" />
+            android:gravity="center_vertical">
+            <ImageView
+                android:src="@drawable/icon_drinks2"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/askDrink"
+                android:textSize="22sp" />
+        </LinearLayout>
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="45dp"
