@@ -4,25 +4,37 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class searchResultMapsActivity extends FragmentActivity {
 
-    //private GoogleMap mMap; // Might be null if Google Play services APK is not available.
+    private GoogleMap mMap; // Might be null if Google Play services APK is not available.
     //float zoom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result_maps);
+        mMap=((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.searchResultMap)).getMap();
+        setUpMapIfNeeded();
         Intent intent = getIntent();
+        String[] result = intent.getStringArrayExtra("RESULT");
         double[] location = intent.getDoubleArrayExtra("LOCATION");
-
-        //mMap=((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.searchResultMap)).getMap();
-        //setUpMapIfNeeded();
-        //LatLng Taipei101=new LatLng(25.033611,121.565000);
-        //zoom=17;
-        //mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(Taipei101,zoom));
+        if(location[0]!=-1) {
+            mMap.addMarker(new MarkerOptions().position(new LatLng(location[0], location[1])).title(result[0]));
+            int zoom=17;
+            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(location[0],location[1]), zoom));
+        }
+        if(location[2]!=-1) {
+            mMap.addMarker(new MarkerOptions().position(new LatLng(location[2], location[3])).title(result[1]));
+        }
+        if(location[4]!=-1) {
+            mMap.addMarker(new MarkerOptions().position(new LatLng(location[4], location[5])).title(result[2]));
+        }
     }
 
     @Override
@@ -46,7 +58,7 @@ public class searchResultMapsActivity extends FragmentActivity {
      * stopped or paused), {@link #onCreate(Bundle)} may not be called again so we should call this
      * method in {@link #onResume()} to guarantee that it will be called.
      */
-    /*private void setUpMapIfNeeded() {
+    private void setUpMapIfNeeded() {
         // Do a null check to confirm that we have not already instantiated the map.
         if (mMap == null) {
             // Try to obtain the map from the SupportMapFragment.
@@ -57,7 +69,7 @@ public class searchResultMapsActivity extends FragmentActivity {
                 setUpMap();
             }
         }
-    }*/
+    }
 
     /**
      * This is where we can add markers or lines, add listeners or move the camera. In this case, we
@@ -65,7 +77,7 @@ public class searchResultMapsActivity extends FragmentActivity {
      * <p/>
      * This should only be called once and when we are sure that {@link #mMap} is not null.
      */
-    /*private void setUpMap() {
+    private void setUpMap() {
         mMap.addMarker(new MarkerOptions().position(new LatLng(0, 0)).title("Marker"));
-    }*/
+    }
 }
