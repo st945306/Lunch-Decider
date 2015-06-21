@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 public class DisplayResultActivity extends ActionBarActivity {
 
+    public Intent oldIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_result);
-        Intent intent = getIntent();
-        String[] result = intent.getStringArrayExtra("RESULT");
+        oldIntent = getIntent();
+        String[] result = oldIntent.getStringArrayExtra("RESULT");
         TextView[] tv = new TextView[3];
         tv[0] = (TextView)findViewById(R.id.result1);
         tv[1] = (TextView)findViewById(R.id.result2);
@@ -46,6 +47,8 @@ public class DisplayResultActivity extends ActionBarActivity {
 
     public void searchResultMap(View view){
         Intent intent = new Intent(this,searchResultMapsActivity.class);
+        double[] location = oldIntent.getDoubleArrayExtra("LOCATION");
+        intent.putExtra("LOCATION", location);
         startActivity(intent);
     }
 }

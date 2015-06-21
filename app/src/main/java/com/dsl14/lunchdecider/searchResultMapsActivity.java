@@ -1,13 +1,10 @@
 package com.dsl14.lunchdecider;
 
-import android.support.v4.app.FragmentActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
 
 public class searchResultMapsActivity extends FragmentActivity {
 
@@ -18,6 +15,9 @@ public class searchResultMapsActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result_maps);
+        Intent intent = getIntent();
+        double[] location = intent.getDoubleArrayExtra("LOCATION");
+
         //mMap=((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.searchResultMap)).getMap();
         //setUpMapIfNeeded();
         //LatLng Taipei101=new LatLng(25.033611,121.565000);

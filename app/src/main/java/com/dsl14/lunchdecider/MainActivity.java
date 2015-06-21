@@ -95,9 +95,18 @@ public class MainActivity extends ActionBarActivity
                         pw.println(budgetP);
                         pw.println(drinkP);
                         String[] result = new String[3];
+                        double[] location = new double[6];
+
                         result[0] = br.readLine();
+                        location[0] = 25.033611;
+                        location[1] = 121.565;
                         result[1] = br.readLine();
+                        location[2] = -1;
+                        location[3] = -1;
                         result[2] = br.readLine();
+                        location[4] = -1;
+                        location[5] = -1;
+                        intent.putExtra("LOCATION", location);
                         intent.putExtra("RESULT", result);
                         startActivity(intent);
                     }
