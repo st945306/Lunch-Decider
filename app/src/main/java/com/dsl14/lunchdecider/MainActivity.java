@@ -141,7 +141,7 @@ public class MainActivity extends ActionBarActivity
     public void decide(View view){
         viewNow = view;
         addRest = false;
-        intent = new Intent(this, DisplayResultActivity.class);
+        intent = new Intent(this, searchResultMapsActivity.class);
         Thread t = new thread();
         t.start();
     }
