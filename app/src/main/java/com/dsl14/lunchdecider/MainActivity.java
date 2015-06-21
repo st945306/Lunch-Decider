@@ -98,14 +98,23 @@ public class MainActivity extends ActionBarActivity
                         double[] location = new double[6];
 
                         result[0] = br.readLine();
-                        location[0] = 25.033611;
-                        location[1] = 121.565;
+                        location[0] = Double.parseDouble(br.readLine());
+                        br.readLine();
+                        /*if (location[0] == 25.022109)
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(viewNow.getContext(),
+                                        "here",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });*/
                         result[1] = br.readLine();
-                        location[2] = -1;
-                        location[3] = -1;
+                        br.readLine();
+                        br.readLine();
                         result[2] = br.readLine();
-                        location[4] = -1;
-                        location[5] = -1;
+                        br.readLine();
+                        br.readLine();
                         intent.putExtra("LOCATION", location);
                         intent.putExtra("RESULT", result);
                         startActivity(intent);
