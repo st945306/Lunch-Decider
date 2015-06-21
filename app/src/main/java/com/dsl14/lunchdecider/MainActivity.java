@@ -99,7 +99,7 @@ public class MainActivity extends ActionBarActivity
 
                         result[0] = br.readLine();
                         location[0] = Double.parseDouble(br.readLine());
-                        br.readLine();
+                        location[1] = Double.parseDouble(br.readLine());
                         /*if (location[0] == 25.022109)
                         runOnUiThread(new Runnable() {
                             @Override
@@ -110,11 +110,11 @@ public class MainActivity extends ActionBarActivity
                             }
                         });*/
                         result[1] = br.readLine();
-                        br.readLine();
-                        br.readLine();
+                        location[2] = Double.parseDouble(br.readLine());
+                        location[3] = Double.parseDouble(br.readLine());
                         result[2] = br.readLine();
-                        br.readLine();
-                        br.readLine();
+                        location[4] = Double.parseDouble(br.readLine());
+                        location[5] = Double.parseDouble(br.readLine());
                         intent.putExtra("LOCATION", location);
                         intent.putExtra("RESULT", result);
                         startActivity(intent);
