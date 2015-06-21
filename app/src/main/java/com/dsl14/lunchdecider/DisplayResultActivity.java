@@ -48,7 +48,9 @@ public class DisplayResultActivity extends ActionBarActivity {
     public void searchResultMap(View view){
         Intent intent = new Intent(this,searchResultMapsActivity.class);
         double[] location = oldIntent.getDoubleArrayExtra("LOCATION");
+        String[] result = oldIntent.getStringArrayExtra("RESULT");
         intent.putExtra("LOCATION", location);
+        intent.putExtra("RESULT",result);
         startActivity(intent);
     }
 }
