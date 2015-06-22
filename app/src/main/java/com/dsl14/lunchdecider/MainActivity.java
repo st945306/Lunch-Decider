@@ -160,6 +160,12 @@ public class MainActivity extends ActionBarActivity
         addRest = true;
         EditText editText = (EditText) findViewById(R.id.newRest);
         newRest = editText.getText().toString();
+        if(newRest.equals("")) {
+            Toast.makeText(viewNow.getContext(),
+                    "Please enter the restaurant name. ",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         Thread t = new thread();
         t.start();
     }
