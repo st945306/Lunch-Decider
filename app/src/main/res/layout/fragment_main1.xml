@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#FFF"
+        android:background="@drawable/cardunderline"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -37,7 +37,7 @@
             android:id="@+id/weatherSpinner"
             android:entries="@array/weatherArray"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
     </LinearLayout>
     <!-- End of card 1 -->
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#FFF"
+        android:background="@drawable/cardunderline"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#FFF"
+        android:background="@drawable/cardunderline"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -118,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:onClick="buttonClick" />
             <RadioButton
-                android:text="No"
+                android:text="Any"
                 android:id="@+id/noButton"
                 android:textSize="14sp"
                 android:layout_width="wrap_content"
@@ -136,7 +136,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         bootstrap:bb_type="primary"
         bootstrap:bb_roundedCorners="true"
         android:onClick="decide" />
