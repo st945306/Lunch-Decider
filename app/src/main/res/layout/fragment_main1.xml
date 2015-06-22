@@ -37,7 +37,7 @@
             android:id="@+id/weatherSpinner"
             android:entries="@array/weatherArray"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="55dp"
             android:textSize="25sp" />
     </LinearLayout>
     <!-- End of card 1 -->
@@ -136,7 +136,7 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         bootstrap:bb_type="primary"
         bootstrap:bb_roundedCorners="true"
         android:onClick="decide" />
