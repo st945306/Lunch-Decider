@@ -1,9 +1,12 @@
 # Lunch-Decider
-DSL final project
-api: 14, android 4.0 icecream sandwitch
-<<<<<<< HEAD
-justice nicky dick
-GGininder fuck
-=======
-justice Nicky BigGG
->>>>>>> 76b7bae5320d16291917f7775c01edd61ebdd7dd
+
+## API Level
+
+API Level: 14, Android 4.0 Icecream Sandwitch
+
+## File Info
+
+* Server: server.java
+* Stored restaurant data: data
+* Slide: DSL-Final-Project.ppt
+* Android prject files: other files
