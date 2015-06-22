@@ -19,7 +19,7 @@
 
     <string-array name="weatherArray">
         <item>Any</item>
-        <item>Hot</item>
+        <item>Sunny</item>
         <item>Cold</item>
         <item>Rainy</item>
     </string-array>

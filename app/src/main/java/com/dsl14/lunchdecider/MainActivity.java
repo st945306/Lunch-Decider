@@ -95,9 +95,27 @@ public class MainActivity extends ActionBarActivity
                         pw.println(budgetP);
                         pw.println(drinkP);
                         String[] result = new String[3];
+                        double[] location = new double[6];
+
                         result[0] = br.readLine();
+                        location[0] = Double.parseDouble(br.readLine());
+                        location[1] = Double.parseDouble(br.readLine());
+                        /*if (location[0] == 25.022109)
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(viewNow.getContext(),
+                                        "here",
+                                        Toast.LENGTH_LONG).show();
+                            }
+                        });*/
                         result[1] = br.readLine();
+                        location[2] = Double.parseDouble(br.readLine());
+                        location[3] = Double.parseDouble(br.readLine());
                         result[2] = br.readLine();
+                        location[4] = Double.parseDouble(br.readLine());
+                        location[5] = Double.parseDouble(br.readLine());
+                        intent.putExtra("LOCATION", location);
                         intent.putExtra("RESULT", result);
                         startActivity(intent);
                     }
@@ -142,6 +160,12 @@ public class MainActivity extends ActionBarActivity
         addRest = true;
         EditText editText = (EditText) findViewById(R.id.newRest);
         newRest = editText.getText().toString();
+        if(newRest.equals("")) {
+            Toast.makeText(viewNow.getContext(),
+                    "Please enter the restaurant name. ",
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
         Thread t = new thread();
         t.start();
     }
