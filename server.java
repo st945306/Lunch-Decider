@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 
 public class server{
-	private static String ip = "140.112.30.34";
+	private static String ip = "140.112.30.39";
 	private static int port = 12345;
 	private static int[] weather, budget, drink;
 	private static String[] rest;
